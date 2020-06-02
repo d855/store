@@ -1,4 +1,8 @@
 <?php 
+ob_start();
+session_start();
+// session_destroy();
+
 
 
 defined('DS') ? null : define('DS', DIRECTORY_SEPARATOR);
@@ -14,5 +18,7 @@ defined('DB_PASS') ? null : define('DB_PASS', 'root');
 
 defined('DB_NAME') ? null : define('DB_NAME', 'ecomm_db');
 
-
 $connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+
+
+require_once('functions.php');
